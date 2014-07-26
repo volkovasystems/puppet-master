@@ -125,3 +125,11 @@ PuppetMaster.prototype.attachPuppet = function attachPuppet( puppet ){
 
 	return this;
 };
+
+PuppetMaster.prototype.startPuppetShow = function startPuppetShow( ){
+	var puppetString = this.determinePuppetString( );
+	var puppet = this.createPuppet( puppetString );
+	this.attachPuppet( puppet );
+
+	return this;
+};
