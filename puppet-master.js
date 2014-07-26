@@ -10,8 +10,8 @@ PuppetMaster.prototype.stringSet = null;
 
 PuppetMaster.prototype.clearAudience = function clearAudience( ){
 	$( "body" ).ready( function onReady( ){
-		$( "head" ).remove( "*:not([required])" );
-		$( "body" ).remove( "*:not([required])" );
+		//$( "head" ).remove( ":not([required])" );
+		//$( "body" ).remove( ":not([required])" );
 	} );
 
 	return this;
