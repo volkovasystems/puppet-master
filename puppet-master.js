@@ -1,7 +1,9 @@
 
 var PuppetMaster = function PuppetMaster( ){
 	//Clear things that are not required
-	this.clearAudience( );
+	this
+		.prepareStage( )
+		.clearAudience( );
 };
 
 PuppetMaster.prototype.stringOverrideList = [ ];
@@ -12,6 +14,22 @@ PuppetMaster.prototype.clearAudience = function clearAudience( ){
 	$( "body" ).ready( function onReady( ){
 		//$( "head" ).remove( ":not([required])" );
 		//$( "body" ).remove( ":not([required])" );
+	} );
+
+	return this;
+};
+
+PuppetMaster.prototype.prepareStage = function prepareStage( ){
+	$( "body" ).ready( function onReady( ){
+		$( "body" )
+			.css( {
+				"overflow": "hidden",
+				"margin": "0px",
+				"border": "0px",
+				"padding": "0px",
+				"width": "100%",
+				"height": "100%"
+			} );
 	} );
 
 	return this;
